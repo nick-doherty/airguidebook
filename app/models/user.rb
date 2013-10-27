@@ -10,6 +10,6 @@
 #
 
 class User < ActiveRecord::Base
-  attr_accessible :name, :air:url, :house_id
+  attr_accessible :name, :air_url, :house_id
   has_one :house
 end

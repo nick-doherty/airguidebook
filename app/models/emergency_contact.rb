@@ -8,7 +8,7 @@
 #  contact  :string(255)
 #
 
-class EmergencyContacts < ActiveRecord::Base
+class EmergencyContact < ActiveRecord::Base
   attr_accessible :house_id, :service, :contact
   belongs_to :house
 end
