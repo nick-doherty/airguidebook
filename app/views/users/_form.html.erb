@@ -1,0 +1,14 @@
+<%= form_for @user do |f| %>
+<p>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</p>
+
+<p>
+  <%= f.label :password %>
+  <%= f.text_field :password %>
+</p>
+
+<%= link_to 'Next', new_house_path %>
+
+<% end %>
