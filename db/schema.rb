@@ -67,7 +67,7 @@ ActiveRecord::Schema.define(:version => 20131027042259) do
 
   create_table "transport_links", :force => true do |t|
     t.integer  "house_id"
-    t.string   "type"
+    t.string   "name"
     t.string   "info"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false

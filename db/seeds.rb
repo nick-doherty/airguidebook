@@ -31,8 +31,8 @@ rs2 = Restaurant.create(:name => 'Emmas on Liberty', :cuisine => 'Lebanese', :co
 sf1 = SuburbFact.create(:fact => 'Petersham Wikipedia', :link => 'http://en.wikipedia.org/wiki/Petersham,_New_South_Wales')
 sf2 = SuburbFact.create(:fact => 'Enmore Wikipedia', :link => 'http://en.wikipedia.org/wiki/Enmore,_New_South_Wales')
 
-t1 = TransportLink.create(:type => 'Bus', :info => 'The 428 leaves at the top of our street and goes to the city in 20 minutes.')
-t2 = TransportLink.create(:type => 'Train', :info => 'You can walk to Newtown Station in ten minutes.')
+t1 = TransportLink.create(:name => 'Bus', :info => 'The 428 leaves at the top of our street and goes to the city in 20 minutes.')
+t2 = TransportLink.create(:name => 'Train', :info => 'You can walk to Newtown Station in ten minutes.')
 
 h1.amenities << am1
 h2.amenities << am2

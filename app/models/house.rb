@@ -20,10 +20,10 @@ class House < ActiveRecord::Base
   attr_accessible :user_id, :air_url, :image, :street, :suburb, :region, :state, :postcode, :country
   belongs_to :user
   has_many :amenities, dependent: :destroy
-  has_many :emergencies, dependent: :destroy
+  has_many :emergency_contacts, dependent: :destroy
   has_many :extras, dependent: :destroy
-  has_many :regions, dependent: :destroy
+  has_many :region_facts, dependent: :destroy
   has_many :restaurants, dependent: :destroy
-  has_many :suburbs, dependent: :destroy
+  has_many :suburb_facts, dependent: :destroy
   has_many :transport_links, dependent: :destroy
 end

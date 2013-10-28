@@ -11,5 +11,5 @@
 
 class User < ActiveRecord::Base
   attr_accessible :name, :password, :house_id
-  has_one :house, dependent: :destroy
+  has_many :houses, dependent: :destroy
 end
