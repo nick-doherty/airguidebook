@@ -3,6 +3,7 @@
 # Table name: transport_links
 #
 #  id         :integer          not null, primary key
+#  house_id   :integer
 #  type       :string(255)
 #  info       :string(255)
 #  created_at :datetime         not null

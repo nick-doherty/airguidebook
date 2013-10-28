@@ -11,19 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131027055944) do
-
-  create_table "addresses", :force => true do |t|
-    t.integer  "house_id"
-    t.string   "street"
-    t.string   "suburb"
-    t.string   "region"
-    t.string   "state"
-    t.string   "postcode"
-    t.string   "country"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
+ActiveRecord::Schema.define(:version => 20131027042259) do
 
   create_table "amenities", :force => true do |t|
     t.integer "house_id"
@@ -45,16 +33,22 @@ ActiveRecord::Schema.define(:version => 20131027055944) do
 
   create_table "houses", :force => true do |t|
     t.integer  "user_id"
+    t.string   "air_url"
     t.string   "image"
+    t.string   "street"
+    t.string   "suburb"
+    t.string   "region"
+    t.string   "state"
+    t.string   "postcode"
+    t.string   "country"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "region_facts", :force => true do |t|
-    t.integer  "fact"
-    t.string   "link"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer "house_id"
+    t.string  "fact"
+    t.string  "link"
   end
 
   create_table "restaurants", :force => true do |t|
@@ -66,11 +60,13 @@ ActiveRecord::Schema.define(:version => 20131027055944) do
   end
 
   create_table "suburb_facts", :force => true do |t|
-    t.integer "fact"
+    t.integer "house_id"
+    t.string  "fact"
     t.string  "link"
   end
 
   create_table "transport_links", :force => true do |t|
+    t.integer  "house_id"
     t.string   "type"
     t.string   "info"
     t.datetime "created_at", :null => false
@@ -79,7 +75,7 @@ ActiveRecord::Schema.define(:version => 20131027055944) do
 
   create_table "users", :force => true do |t|
     t.string   "name"
-    t.string   "air_url"
+    t.string   "password"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

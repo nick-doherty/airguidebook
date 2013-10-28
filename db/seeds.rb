@@ -1,5 +1,4 @@
 User.destroy_all
-Address.destroy_all
 Amenity.destroy_all
 EmergencyContact.destroy_all
 Extra.destroy_all
@@ -8,12 +7,11 @@ Restaurant.destroy_all
 SuburbFact.destroy_all
 TransportLink.destroy_all
 
+u1 = User.create(:name => 'Jen Taunton')
+u2 = User.create(:name => 'Bec Munro')
 
-u1 = User.create(:name => 'Jen Taunton', :air_url => 'https://www.airbnb.com.au/rooms/1543644')
-u2 = User.create(:name => 'Bec Munro', :air_url => 'https://www.airbnb.com.au/rooms/745248')
-
-ad1 = Address.create(:street => '30 Maria Street', :suburb => 'Petersham', :region => 'Sydney', :state => 'NSW', :postcode => '2049', :country => 'Australia')
-ad2 = Address.create(:street => '42 Juliett Street', :suburb => 'Enmore', :region => 'Sydney', :state => 'NSW', :postcode => '2042', :country => 'Australia')
+h1 = House.create(:street => '30 Maria Street', :air_url => 'https://www.airbnb.com.au/rooms/1543644', :suburb => 'Petersham', :region => 'Sydney', :state => 'NSW', :postcode => '2049', :country => 'Australia')
+h2 = House.create(:street => '42 Juliett Street',:air_url => 'https://www.airbnb.com.au/rooms/745248', :suburb => 'Enmore', :region => 'Sydney', :state => 'NSW', :postcode => '2042', :country => 'Australia')
 
 am1 = Amenity.create(:name => 'Foxtel', :info => 'We have a full Foxtel package including Movies and Sport.')
 am2 = Amenity.create(:name => 'Air Conditioning', :info => 'We have reverse cycle air con in the Lounge Room.')

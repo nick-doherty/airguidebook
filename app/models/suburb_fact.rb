@@ -1,10 +1,11 @@
 # == Schema Information
 #
-# Table name: suburbs
+# Table name: suburb_facts
 #
-#  id   :integer          not null, primary key
-#  fact :integer
-#  link :string(255)
+#  id       :integer          not null, primary key
+#  house_id :integer
+#  fact     :string(255)
+#  link     :string(255)
 #
 
 class SuburbFact < ActiveRecord::Base

@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: emergencies
+# Table name: emergency_contacts
 #
 #  id       :integer          not null, primary key
 #  house_id :integer

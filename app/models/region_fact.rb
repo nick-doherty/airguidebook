@@ -1,12 +1,11 @@
 # == Schema Information
 #
-# Table name: regions
+# Table name: region_facts
 #
-#  id         :integer          not null, primary key
-#  fact       :integer
-#  link       :string(255)
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id       :integer          not null, primary key
+#  house_id :integer
+#  fact     :string(255)
+#  link     :string(255)
 #
 
 class RegionFact < ActiveRecord::Base
