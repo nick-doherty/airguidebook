@@ -16,4 +16,8 @@ class User < ActiveRecord::Base
 
   attr_accessible :name, :email, :password, :password_confirmation, :house_id
   has_many :houses, dependent: :destroy
+
+  def next_section
+      "/houses/#{ @authenticated.houses.first.id }/edit"
+  end
 end

@@ -1,37 +1,21 @@
-<h1>New suburb facts</h1>
+<div class="row">
+  <div class="col-md-8">
+    <h1>Add suburb facts</h1>
+    <%= render :partial => 'form' %>
+  </div>
 
-<%= form_for @suburb_fact do |f| %>
-<p>
-  <%= f.label :fact %>
-  <%= f.text_field :fact %>
-    <%= f.label :link %>
-  <%= f.text_field :link %>
-</p>
-<!-- <p>
-  <%= f.label :fact %>
-  <%= f.text_field :fact %>
-    <%= f.label :link %>
-  <%= f.text_field :link %>
-</p>
-<p>
-  <%= f.label :fact %>
-  <%= f.text_field :fact %>
-    <%= f.label :link %>
-  <%= f.text_field :link %>
-</p>
-<p>
-  <%= f.label :fact %>
-  <%= f.text_field :fact %>
-    <%= f.label :link %>
-  <%= f.text_field :link %>
-</p>
-<p>
-  <%= f.label :fact %>
-  <%= f.text_field :fact %>
-    <%= f.label :link %>
-  <%= f.text_field :link %>
-</p> -->
-
-<%= f.submit %>
-
-<% end %>
+  <div class="col-md-4">
+    <div class="list-group">
+      <li class="list-group-item">Account stuff</li>
+      <li class="list-group-item">Key house info</li>
+      <li class="list-group-item">Region info</li>
+      <li class="list-group-item active">Suburb info</li>
+      <li class="list-group-item">Where to eat</li>
+      <li class="list-group-item">Getting around</li>
+      <li class="list-group-item">House Amenities</li>
+      <li class="list-group-item">Emergency contacts</li>
+      <li class="list-group-item">Anything else?</li>
+      </div>
+    </div>
+  </div>
+</div>

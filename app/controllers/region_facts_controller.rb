@@ -4,10 +4,13 @@ class RegionFactsController  < ApplicationController
   end
 
   def create
-  @region_fact = RegionFact.create params[:region_fact]
-  @region_fact.house_id = @authenticated.houses.first.id
-  @region_fact.save
-  redirect_to new_suburb_fact_path
+    @region_fact = RegionFact.create params[:region_fact]
+    @region_fact.house_id = @authenticated.houses.first.id
+    @region_fact.save
+    redirect_to new_suburb_fact_path
+  end
+
+  def edit
   end
 end
 

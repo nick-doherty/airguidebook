@@ -1,0 +1,11 @@
+<%= form_for @emergency_contact do |f| %>
+<p>
+  <%= f.label :service %>
+  <%= f.text_field :service, :autofocus => true, :class => 'form-control'  %>
+  <%= f.label :contact %>
+  <%= f.text_field :contact, :class => 'form-control' %>
+</p>
+
+<%= f.submit %>
+
+<% end %>

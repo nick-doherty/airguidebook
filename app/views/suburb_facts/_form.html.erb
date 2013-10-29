@@ -1,0 +1,11 @@
+<%= form_for @suburb_fact do |f| %>
+<p>
+  <%= f.label :fact %>
+  <%= f.text_field :fact, :autofocus => true, :class => 'form-control'  %>
+    <%= f.label :link %>
+  <%= f.text_field :link, :class => 'form-control' %>
+</p>
+
+<%= f.submit %>
+
+<% end %>

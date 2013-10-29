@@ -1,0 +1,9 @@
+<%= form_for @extra do |f| %>
+<p>
+  <%= f.label :text %>
+  <%= f.text_field :text, :autofocus => true, :class => 'form-control'  %>
+</p>
+
+<%= f.submit %>
+
+<% end %>

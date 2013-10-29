@@ -18,13 +18,13 @@ class UsersController  < ApplicationController
 
   def edit
     @user = @authenticated
-    render :new
+    render :edit
   end
 
   def update
     @user = @authenticated
     if @user.update_attributes params[:user]
-      redirect_to root_path
+      redirect_to "/houses/#{ @authenticated.houses.first.id }/edit"
     else
       render :new
     end

@@ -6,9 +6,5 @@ AirguidebookApp::Application.routes.draw do
   delete '/login' => 'session#destroy'
   get '/welcome' => 'users#welcome'
 
-  resources :users, :houses, :region_facts, :suburb_facts, :restaurants, :except => [:edit] do
-    collection do
-      get 'edit'
-    end
-  end
+  resources :users, :houses, :region_facts, :suburb_facts, :restaurants, :transport_links, :amenities, :emergency_contacts, :extras
 end
