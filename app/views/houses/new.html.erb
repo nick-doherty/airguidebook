@@ -1,2 +1,41 @@
 <h1>New house</h1>
-<%= render :partial => 'form' %>
+
+<%= form_for @house do |f| %>
+<p>
+  <%= f.label :air_url %>
+  <%= f.text_field :air_url %>
+</p>
+
+<p>
+  <%= f.label :image %>
+  <%= f.text_field :image %>
+</p>
+
+<p>
+  <%= f.label :street %>
+  <%= f.text_field :street %>
+</p>
+<p>
+  <%= f.label :suburb %>
+  <%= f.text_field :suburb %>
+</p>
+<p>
+  <%= f.label :region %>
+  <%= f.text_field :region %>
+</p>
+<p>
+  <%= f.label :state %>
+  <%= f.text_field :state %>
+</p>
+<p>
+  <%= f.label :postcode %>
+  <%= f.text_field :postcode %>
+</p>
+<p>
+  <%= f.label :country %>
+  <%= f.text_field :country %>
+</p>
+
+<%= f.submit %>
+
+<% end %>

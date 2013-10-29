@@ -6,13 +6,23 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
 
 <nav>
-<ul>
-  <li><%= link_to 'Home', root_path %></li>
-</ul>
+  <ul>
+    <li><%= link_to 'Home', root_path %></li>
+    <%== authentication_menu %>
+  </ul>
 </nav>
+
+  <p>
+    <% if flash[:notice].present? %>
+  </p>
+  <p>
+    <%= flash[:notice] %>
+  </p>
+  <% end %>
 
 <%= yield %>
 
