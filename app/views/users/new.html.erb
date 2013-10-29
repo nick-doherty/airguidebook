@@ -1,2 +1,51 @@
-<h1>New user</h1>
-<%= render :partial => 'form' %>
+<div class="row">
+  <div class="col-md-8">
+
+  <% if @user.errors.any? %>
+    <ol>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li class="alert alert-warning"><%= msg %> </div>
+      <% end %>
+    </ol>
+  <% end %>
+
+    <h1>New user</h1>
+
+    <%= form_for @user do |f| %>
+    <p>
+      <%= f.label :name %>
+      <%= f.text_field :name, :autofocus => true, :class => 'form-control' %>
+    </p>
+    <p>
+      <%= f.label :email %>
+      <%= f.text_field :email, :class => 'form-control' %>
+    </p>
+    <p>
+      <%= f.label :password %>
+      <%= f.password_field :password, :class => 'form-control' %>
+    </p>
+    <p>
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation, :class => 'form-control' %>
+    </p>
+
+    <%= f.submit %>
+
+    <% end %>
+  </div>
+
+  <div class="col-md-4">
+    <div class="list-group">
+      <li class="list-group-item active">Create your account</li>
+      <li class="list-group-item">Add your house</li>
+      <li class="list-group-item">Region info</li>
+      <li class="list-group-item">Suburb info</li>
+      <li class="list-group-item">Where to eat</li>
+      <li class="list-group-item">Getting around</li>
+      <li class="list-group-item">House Amenities</li>
+      <li class="list-group-item">Emergency contacts</li>
+      <li class="list-group-item">Anything else?</li>
+      </div>
+    </div>
+  </div>
+</div>

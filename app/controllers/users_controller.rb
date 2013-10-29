@@ -30,6 +30,9 @@ class UsersController  < ApplicationController
     end
   end
 
+  def welcome
+  end
+
   private
 
   def check_if_logged_in

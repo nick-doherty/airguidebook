@@ -1,0 +1,9 @@
+<h1>Welcome back!</h1>
+
+<p>Carry on with your airguidebook or delete and start again.</p>
+
+<% if @authenticated.houses.length %>
+  <%= link_to 'Continue with guide', edit_houses_path(@authenticated.houses.first.id) %>
+<% else %>
+  <%= link_to 'Continue with guide', new_house_path %>
+<% end %>
