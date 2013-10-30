@@ -22,10 +22,10 @@ class HousesController  < ApplicationController
     @house = House.find params[:id]
     @house.update_attributes params[:house]
     @house.save
-    redirect_to region_fact_path(region_fact)
+    redirect_to edit_region_fact_path(@house.region_facts.first.id)
+  end
+
+  def show
+    render :layout => "guidebook"
   end
 end
-
-# check do they have existing?
-#   if they do go to new, if not go to edit.
-

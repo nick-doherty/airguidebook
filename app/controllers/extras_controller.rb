@@ -8,4 +8,15 @@ class ExtrasController  < ApplicationController
     @extra.house_id = @authenticated.houses.first.id
     @extra.save
   end
+
+  def edit
+    @extra = Extra.find params[:id]
+  end
+
+ def update
+    @extra = Extra.find params[:id]
+    @extra.update_attributes params[:extra]
+    @extra.save
+    redirect_to edit_extra_path(@authenticated.houses.first.extras.first.id)
+  end
 end

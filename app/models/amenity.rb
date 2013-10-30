@@ -5,7 +5,6 @@
 #  id       :integer          not null, primary key
 #  house_id :integer
 #  name     :string(255)
-#  type     :string(255)
 #  info     :string(255)
 #
 

@@ -11,12 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131028225508) do
+ActiveRecord::Schema.define(:version => 20131029235124) do
 
   create_table "amenities", :force => true do |t|
     t.integer "house_id"
     t.string  "name"
-    t.string  "type"
     t.string  "info"
   end
 

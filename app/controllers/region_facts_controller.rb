@@ -11,6 +11,13 @@ class RegionFactsController  < ApplicationController
   end
 
   def edit
+    @region_fact = RegionFact.find params[:id]
+  end
+
+  def update
+    @region_fact = RegionFact.find params[:id]
+    @region_fact.update_attributes params[:region_fact]
+    @region_fact.save
+    redirect_to edit_suburb_fact_path(@authenticated.houses.first.suburb_facts.first.id)
   end
 end
-

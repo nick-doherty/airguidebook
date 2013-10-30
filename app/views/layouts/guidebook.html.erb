@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to airguidebook</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "airguidebook", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+    <div class="container">
+
+      <div class="masthead">
+        <h1 class="text-muted">airguidebook</h1>
+        <ul class="nav nav-justified navbar-fixed-top">
+          <li><a href="#house_info">House Info</a></li>
+          <li><a href="#region_info">Region Info</a></li>
+          <li><a href="#suburb_info">Suburb Info</a></li>
+          <li><a href="#eating_out">Eating Out</a></li>
+          <li><a href="#transport">Transport</a></li>
+          <li><a href="#amenities">Amenities</a></li>
+          <li><a href="#emergencies">Emergencies</a></li>
+          <li><a href="#also">Also...</a></li>
+        </ul>
+      </div>
+    </div>
+
+        <%= yield %>
+</body>
+
+</html>

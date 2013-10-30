@@ -9,4 +9,15 @@ class AmenitiesController  < ApplicationController
     @amenity.save
     redirect_to new_emergency_contact_path
   end
+
+  def edit
+    @amenity = Amenity.find params[:id]
+  end
+
+ def update
+    @amenity = Amenity.find params[:id]
+    @amenity.update_attributes params[:amenity]
+    @amenity.save
+    redirect_to edit_emergency_contact_path(@authenticated.houses.first.emergency_contacts.first.id)
+  end
 end
