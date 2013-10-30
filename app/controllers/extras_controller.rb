@@ -7,6 +7,7 @@ class ExtrasController  < ApplicationController
     @extra = Extra.create params[:extra]
     @extra.house_id = @authenticated.houses.first.id
     @extra.save
+    redirect_to house_path(@authenticated.houses.first.id)
   end
 
   def edit
@@ -17,6 +18,6 @@ class ExtrasController  < ApplicationController
     @extra = Extra.find params[:id]
     @extra.update_attributes params[:extra]
     @extra.save
-    redirect_to edit_extra_path(@authenticated.houses.first.extras.first.id)
+    redirect_to house_path(@authenticated.houses.first.id)
   end
 end

@@ -10,6 +10,7 @@ class UsersController  < ApplicationController
 
     if @user.save
       session[:user_id] = @user.id
+      @user.houses << House.new
       redirect_to new_house_path
     else
       render :new

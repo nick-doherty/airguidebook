@@ -2,93 +2,94 @@
 </div>
 
 <div id="region_info">
-  <h1>THE AREA YOU'LL BE IN...</h1>
-    <p>Some text goes here.</p>
+  <h1>THE REGION</h1>
+    <i class="fa fa-info"></i>
     <ul>
       <% @authenticated.houses.first.region_facts.each do |region_fact| %>
-          <li>
-            <p><%= region_fact.fact %></p>
-            <%= link_to 'More Info', region_fact.link %>
-          </li>
-      <% end %>
+      <li>
+        <p><%= region_fact.fact %></p>
+         <%= link_to 'More Info', region_fact.link %>
+      </li>
+        <% end %>
     </ul>
 </div>
 
 <div id="suburb_info">
-  <h1>THE SUBURB YOU'LL BE IN...</h1>
-    <p>Some text goes here.</p>
+  <h1>THE SUBURB</h1>
+    <i class="fa fa-heart"></i>
     <ul>
       <% @authenticated.houses.first.suburb_facts.each do |suburb_fact| %>
-          <li>
-            <p><%= suburb_fact.fact %></p>
-            <%= link_to 'More Info', suburb_fact.link %>
-          </li>
-      <% end %>
+        <li>
+          <p><%= suburb_fact.fact %></p>
+          <%= link_to 'More Info', suburb_fact.link %>
+        </li>
+         <% end %>
     </ul>
 </div>
 
 <div id="eating_out">
-  <h1>WHERE YOU SHOULD EAT...</h1>
-    <p>Some text goes here.</p>
+  <h1>EATING</h1>
+    <i class="fa fa-cutlery"></i>
     <ul>
       <% @authenticated.houses.first.restaurants.each do |restaurant| %>
-          <li>
-            <p><%= restaurant.name %></p>
-            <p><%= restaurant.cuisine %></p>
-            <%= link_to 'More Info', restaurant.link %>
-          </li>
-      <% end %>
+        <li>
+          <p><%= restaurant.name %></p>
+          <p><%= restaurant.cuisine %></p>
+          <%= link_to 'More Info', restaurant.link %>
+        </li>
+        <% end %>
     </ul>
 </div>
 
 <div id="transport">
-  <h1>HOW TO GET AROUND...</h1>
-    <p>Some text goes here.</p>
-    <ul>
-      <% @authenticated.houses.first.transport_links.each do |transport_link| %>
-          <li>
-            <p><%= transport_link.name %></p>
-            <%= link_to 'More Info', transport_link.info %>
-          </li>
+  <h1>TRANSPORT</h1>
+  <i class="fa fa-ticket"></i>
+  <ul>
+    <% @authenticated.houses.first.transport_links.each do |transport_link| %>
+      <li>
+        <p><%= transport_link.name %></p>
+        <%= link_to 'More Info', transport_link.info %>
+      </li>
       <% end %>
-    </ul>
+  </ul>
 </div>
 
 <div id="amenities">
-  <h1>WHERE YOU SHOULD EAT...</h1>
-    <p>Some text goes here.</p>
+  <h1>AMENITIES</h1>
+    <i class="fa fa-home"></i>
     <ul>
-      <% @authenticated.houses.first.restaurants.each do |restaurant| %>
-          <li>
-            <p><%= restaurant.name %></p>
-            <p><%= restaurant.cuisine %></p>
-            <%= link_to 'More Info', restaurant.link %>
-          </li>
+      <% @authenticated.houses.first.amenities.each do |amenity| %>
+      <li>
+        <p><%= amenity.name %></p>
+        <p><%= amenity.info %></p>
+      </li>
       <% end %>
     </ul>
 </div>
 
 <div id="emergencies">
-  <h1>WHAT IF SOMETHING GOES WRONG?</h1>
+  <h1>EMERGENCIES</h1>
+    <i class="fa fa-ambulance"></i>
     <p>Some text goes here.</p>
-    <ul>
-      <% @authenticated.houses.first.emergency_contacts.each do |emergency_contact| %>
-          <li>
-            <p><%= emergency_contact.service %></p>
-            <p><%= emergency_contact.contact %></p>
-          </li>
-      <% end %>
-    </ul>
+      <ul>
+        <% @authenticated.houses.first.emergency_contacts.each do |emergency_contact| %>
+        <li>
+        <p><%= emergency_contact.service %></p>
+        <p><%= emergency_contact.contact %></p>
+        </li>
+        <% end %>
+      </ul>
 </div>
 
 <div id="also">
-  <h1>ALSO...</h1>
-    <p>Some text goes here.</p>
-    <ul>
-      <% @authenticated.houses.first.extras.each do |extra| %>
-          <li>
-            <p><%= extra.text %></p>
-          </li>
-      <% end %>
-    </ul>
+  <h1>AND ALSO...</h1>
+    <i class="fa fa-exclamation-circle"></i>
+  <p>Some text goes here.</p>
+  <ul>
+    <% @authenticated.houses.first.extras.each do |extra| %>
+    <li>
+      <p><%= extra.text %></p>
+    </li>
+    <% end %>
+  </ul>
 </div>

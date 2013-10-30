@@ -1,32 +1,53 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Welcome to airguidebook</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= stylesheet_link_tag    "airguidebook", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
+    <head>
+      <link href='http://fonts.googleapis.com/css?family=Cabin:400,700,500italic|Oswald:400,300,700' rel='stylesheet' type='text/css'>
+      <title>Welcome to airguidebook</title>
+      <%= stylesheet_link_tag    "application", :media => "all" %>
+      <%= stylesheet_link_tag    "airguidebook", :media => "all" %>
+      <%= javascript_include_tag "application" %>
+      <%= csrf_meta_tags %>
+      <script type="text/javascript" src="//use.typekit.net/sdq5uux.js"></script>
+      <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+      <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+    </head>
 
-<body>
+    <body>
+      <header>
+   <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
-
-      <div class="masthead">
-        <h1 class="text-muted">airguidebook</h1>
-        <ul class="nav nav-justified navbar-fixed-top">
-          <li><a href="#house_info">House Info</a></li>
-          <li><a href="#region_info">Region Info</a></li>
-          <li><a href="#suburb_info">Suburb Info</a></li>
-          <li><a href="#eating_out">Eating Out</a></li>
-          <li><a href="#transport">Transport</a></li>
-          <li><a href="#amenities">Amenities</a></li>
-          <li><a href="#emergencies">Emergencies</a></li>
-          <li><a href="#also">Also...</a></li>
-        </ul>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">airguidebook</a>
       </div>
-    </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+              <li><a href="#house_info">House Info</a></li>
+              <li><a href="#region_info">Region Info</a></li>
+              <li><a href="#suburb_info">Suburb Info</a></li>
+              <li><a href="#eating_out">Eating Out</a></li>
+              <li><a href="#transport">Transport</a></li>
+              <li><a href="#amenities">Amenities</a></li>
+              <li><a href="#emergencies">Emergencies</a></li>
+              <li><a href="#also">Extra...</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </header>
 
-        <%= yield %>
-</body>
-
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <h1 class="logo-show">airguidebook</h1>
+              <%= yield %>
+          </div>
+        </div>
+      </div>
+    </article>
+  </body>
 </html>

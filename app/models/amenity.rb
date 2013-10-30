@@ -9,6 +9,6 @@
 #
 
 class Amenity < ActiveRecord::Base
-  attr_accessible :house_id, :name, :type, :info
+  attr_accessible :house_id, :name, :info
   belongs_to :house
 end
