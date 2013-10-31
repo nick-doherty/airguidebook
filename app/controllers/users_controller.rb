@@ -2,11 +2,10 @@ class UsersController  < ApplicationController
     before_filter :check_if_logged_in, :except => [:new, :create]
 
   def new
-    if
-      @user = @authenticated && @authenticated.houses.length > 0
+    if @user = @authenticated && (@authenticated.houses.length > 0)
       redirect_to "/houses/#{ @authenticated.houses.first.id }/edit"
     elsif
-      @user = @authenticated && @authenticated.houses < 1
+      @user = @authenticated && (@authenticated.houses < 1)
       redirect_to new_house_path
     else
       @user = User.new

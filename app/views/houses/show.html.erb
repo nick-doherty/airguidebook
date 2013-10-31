@@ -4,51 +4,59 @@
   </div>
 
   <div id="region_info">
-    <h1>THE REGION</h1>
+    <div class="highlight">
+      <h1>THE REGION</h1>
       <i class="fa fa-info"></i>
-      <h3>This website will tell you all about my region.</h3>
-      <ul>
-        <% @authenticated.houses.first.region_facts.each do |region_fact| %>
-        <li>
-          <p><%= region_fact.fact %></p>
-           <%= link_to 'More Info', region_fact.link %>
-        </li>
-          <% end %>
-      </ul>
+    </div>
+        <h3>This website will tell you all about my region.</h3>
+        <ul>
+          <% @authenticated.houses.first.region_facts.each do |region_fact| %>
+          <li>
+            <p><%= region_fact.fact %></p>
+             <%= link_to 'More Info', region_fact.link %>
+          </li>
+            <% end %>
+        </ul>
   </div>
 
   <div id="suburb_info">
-    <h1>THE SUBURB</h1>
-      <i class="fa fa-heart"></i>
-      <h3>This is something I love about my suburb.</h3>
-      <ul>
-        <% @authenticated.houses.first.suburb_facts.each do |suburb_fact| %>
-          <li>
-            <p><%= suburb_fact.fact %></p>
-            <%= link_to 'More Info', suburb_fact.link %>
-          </li>
-           <% end %>
-      </ul>
+    <div class="highlight">
+      <h1>THE SUBURB</h1>
+        <i class="fa fa-heart"></i>
+    </div>
+        <h3>This is something I love about my suburb.</h3>
+        <ul>
+          <% @authenticated.houses.first.suburb_facts.each do |suburb_fact| %>
+            <li>
+              <p><%= suburb_fact.fact %></p>
+              <%= link_to 'More Info', suburb_fact.link %>
+            </li>
+             <% end %>
+        </ul>
   </div>
 
   <div id="eating_out">
-    <h1>EATING</h1>
-      <i class="fa fa-cutlery"></i>
-      <h3>Here is a great place to eat.</h3>
-      <ul>
-        <% @authenticated.houses.first.restaurants.each do |restaurant| %>
-          <li>
-            <p><%= restaurant.name %></p>
-            <p class="quite_important"><%= restaurant.cuisine %></p>
-            <%= link_to 'More Info', restaurant.link %>
-          </li>
-          <% end %>
-      </ul>
+    <div class="highlight">
+      <h1>EATING</h1>
+        <i class="fa fa-cutlery"></i>
+    </div>
+        <h3>Here is a great place to eat.</h3>
+        <ul>
+          <% @authenticated.houses.first.restaurants.each do |restaurant| %>
+            <li>
+              <p><%= restaurant.name %></p>
+              <p class="quite_important"><%= restaurant.cuisine %></p>
+              <%= link_to 'More Info', restaurant.link %>
+            </li>
+            <% end %>
+        </ul>
   </div>
 
   <div id="transport">
-    <h1>TRANSPORT</h1>
-    <i class="fa fa-ticket"></i>
+    <div class="highlight">
+      <h1>TRANSPORT</h1>
+      <i class="fa fa-ticket"></i>
+    </div>
     <h3>This website tells you all you need to know about getting around.</h3>
     <ul>
       <% @authenticated.houses.first.transport_links.each do |transport_link| %>
@@ -61,8 +69,10 @@
   </div>
 
   <div id="amenities">
-    <h1>AMENITIES</h1>
+    <div class="highlight">
+      <h1>AMENITIES</h1>
       <i class="fa fa-home"></i>
+     </div>
       <h3>This is something really important to know about my house.</h3>
       <ul>
         <% @authenticated.houses.first.amenities.each do |amenity| %>
@@ -75,8 +85,10 @@
   </div>
 
   <div id="emergencies">
-    <h1>EMERGENCIES</h1>
-      <i class="fa fa-ambulance"></i>
+    <div class="highlight">
+      <h1>EMERGENCIES</h1>
+        <i class="fa fa-ambulance"></i>
+    </div>
       <h3>This is who to call if you get sick!</h3>
         <ul>
           <% @authenticated.houses.first.emergency_contacts.each do |emergency_contact| %>
@@ -89,14 +101,16 @@
   </div>
 
   <div id="also">
-    <h1>AND ALSO...</h1>
-      <i class="fa fa-exclamation-circle"></i>
-    <h3>Here's a pro tip for my street.</h3>
-    <ul>
-      <% @authenticated.houses.first.extras.each do |extra| %>
-      <li>
-        <p><%= extra.text %></p>
-      </li>
-      <% end %>
-    </ul>
+    <div class="highlight">
+      <h1>AND ALSO...</h1>
+        <i class="fa fa-exclamation-circle"></i>
+    </div>
+      <h3>Here's a pro tip for my street.</h3>
+      <ul>
+        <% @authenticated.houses.first.extras.each do |extra| %>
+        <li>
+          <p><%= extra.text %></p>
+        </li>
+        <% end %>
+      </ul>
   </div>

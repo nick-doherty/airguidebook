@@ -1,5 +1,42 @@
+p {
+  color: white;
+}
+
+.container .jumbotron {
+  background-color: #0d747c;
+  color: white;
+}
+
+h2 {
+  color: white;
+}
+
 .nav {
   font-size: medium;
+}
+
+.list-group-item.active {
+  border-color: white;
+}
+
+.list-group-item.active:hover {
+  border-color: white;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: white;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: #e8d069;
+  border-color: white;
+}
+
+.navbar-inverse .navbar-brand {
+  color: white;
+}
+
+.btn-primary {
+background-color: #00b0ff
 }
 
 .navbar-brand {
@@ -21,7 +58,12 @@ body {
   margin-top: 60px;
   font-family: 'Cabin', sans-serif;
   font-size: large;
-/*  background: #6EBED2;*/
+  background-color: #108a93;
+}
+
+.navbar {
+  background-color: #ad1d28;
+  border-color: #911821;
 }
 
 h1 {
@@ -38,6 +80,15 @@ a {
   padding-top: 20px;
 }
 
+.list-group-item {
+  background-color: #0d747c;
+  border-color: white;
+}
+
+.col-md-12 {
+  color: white;
+}
+
 .btn-primary {
   margin-top: 25px;
   margin-bottom: 15px;
@@ -51,13 +102,17 @@ a {
   font-family: 'bello-pro';
   font-size: 80px;
   padding: .3em, 3am, 3em, 0;
+  color: white;
 }
+
 .guidebook h1 {
   margin: 0.8em;
+  padding-top: 50px;
 }
+
 .guidebook i {
-  margin-bottom: .5em;
   font-size: 100px;
+  padding-bottom: 40px;
 }
 
 .guidebook h3 {
@@ -85,7 +140,22 @@ a {
 .guidebook ul li a {
   text-decoration: none;
   list-style: none;
+  color: #e8d069;
+}
+
+footer p {
+  color: #e8d069;
 }
 
 .guidebook div {
+  color: white;
+}
+
+.highlight {
+  background-color: #0d747c;
+  margin-bottom: 3em;
+  width: 32%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  border-radius: 100%;
 }

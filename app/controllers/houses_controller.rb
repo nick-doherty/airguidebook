@@ -24,7 +24,11 @@ class HousesController  < ApplicationController
     @house = House.find params[:id]
     @house.update_attributes params[:house]
     @house.save
-    redirect_to edit_region_fact_path(@house.region_facts.first.id)
+    if (@house.region_facts.length > 0)
+      redirect_to edit_region_fact_path(@house.region_facts.first.id)
+    else
+      redirect_to new_region_fact_path
+    end
   end
 
   def show
