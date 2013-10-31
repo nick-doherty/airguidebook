@@ -7,6 +7,12 @@ p {
   color: white;
 }
 
+.logo-font {
+  font-family: 'bello-pro';
+  font-size: 80px;
+  color: white;
+}
+
 h2 {
   color: white;
 }
@@ -158,4 +164,8 @@ footer p {
   margin: 0 auto;
   margin-bottom: 40px;
   border-radius: 100%;
+}
+
+.row-home {
+  text-align: center;
 }
