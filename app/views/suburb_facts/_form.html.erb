@@ -1,11 +1,11 @@
 <%= form_for @suburb_fact do |f| %>
 <p>
   <%= f.label :fact %>
-  <%= f.text_field :fact, :autofocus => true, :class => 'form-control'  %>
+  <%= f.text_field :fact, :autofocus => true, :class => 'form-control', :placeholder => "Where I love to relax." %>
     <%= f.label :link %>
-  <%= f.text_field :link, :class => 'form-control' %>
+  <%= f.text_field :link, :class => 'form-control', :placeholder => "www.maundrellpark.com.au" %>
 </p>
 
-<%= f.submit :class => 'btn btn-primary' %>
+<%= f.submit "Save and continue", :class => 'btn btn-primary' %>
 
 <% end %>

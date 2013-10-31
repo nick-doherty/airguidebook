@@ -1,9 +1,9 @@
 <%= form_for @extra do |f| %>
 <p>
   <%= f.label :text %>
-  <%= f.text_field :text, :autofocus => true, :class => 'form-control'  %>
+  <%= f.text_field :text, :autofocus => true, :class => 'form-control', :placeholder => "Watch out for the guy next door. He's a bit full-on but totally harmless."  %>
 </p>
 
-<%= f.submit :class => 'btn btn-primary' %>
+<%=f.submit "Save and continue", :class => 'btn btn-primary' %>
 
 <% end %>

@@ -1,11 +1,11 @@
 <%= form_for @transport_link do |f| %>
 <p>
   <%= f.label :name %>
-  <%= f.text_field :name, :autofocus => true, :class => 'form-control'  %>
+  <%= f.text_field :name, :autofocus => true, :class => 'form-control', :placeholder => "Train"  %>
   <%= f.label :info %>
-  <%= f.text_field :info, :class => 'form-control' %>
+  <%= f.text_field :info, :class => 'form-control', :placeholder => "www.sydneytrains.com.au"   %>
 </p>
 
-<%= f.submit :class => 'btn btn-primary' %>
+<%= f.submit "Save and continue", :class => 'btn btn-primary' %>
 
 <% end %>

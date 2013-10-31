@@ -1,11 +1,11 @@
 <%= form_for @emergency_contact do |f| %>
 <p>
   <%= f.label :service %>
-  <%= f.text_field :service, :autofocus => true, :class => 'form-control'  %>
+  <%= f.text_field :service, :autofocus => true, :class => 'form-control' , :placeholder => "Doctor" %>
   <%= f.label :contact %>
-  <%= f.text_field :contact, :class => 'form-control' %>
+  <%= f.text_field :contact, :class => 'form-control', :placeholder => "02 9560 6111" %>
 </p>
 
-<%= f.submit :class => 'btn btn-primary' %>
+<%= f.submit "Save and continue", :class => 'btn btn-primary' %>
 
 <% end %>

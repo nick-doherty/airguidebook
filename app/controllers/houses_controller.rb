@@ -11,6 +11,8 @@ class HousesController  < ApplicationController
   end
 
   def destroy
+    @user = @authenticated
+    @user.houses.last.delete
     redirect_to root_path
   end
 

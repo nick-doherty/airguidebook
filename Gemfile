@@ -27,6 +27,7 @@ group :development, :test do
   gem 'annotate'
 
   gem 'quiet_assets'
+  gem 'dotenv-rails'
   gem 'better_errors'
   # BetterErrors.editor = :sublime if defined? BetterErrors  (initializer)
   # http://localhost:3000/__better_errors (reports last exception for debugging)

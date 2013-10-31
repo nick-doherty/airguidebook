@@ -1,95 +1,102 @@
-<div id="house_info">
-</div>
+  <h1 class="logo">airguidebook</h1>
 
-<div id="region_info">
-  <h1>THE REGION</h1>
-    <i class="fa fa-info"></i>
-    <ul>
-      <% @authenticated.houses.first.region_facts.each do |region_fact| %>
-      <li>
-        <p><%= region_fact.fact %></p>
-         <%= link_to 'More Info', region_fact.link %>
-      </li>
-        <% end %>
-    </ul>
-</div>
+  <div id="house_info">
+  </div>
 
-<div id="suburb_info">
-  <h1>THE SUBURB</h1>
-    <i class="fa fa-heart"></i>
-    <ul>
-      <% @authenticated.houses.first.suburb_facts.each do |suburb_fact| %>
-        <li>
-          <p><%= suburb_fact.fact %></p>
-          <%= link_to 'More Info', suburb_fact.link %>
-        </li>
-         <% end %>
-    </ul>
-</div>
-
-<div id="eating_out">
-  <h1>EATING</h1>
-    <i class="fa fa-cutlery"></i>
-    <ul>
-      <% @authenticated.houses.first.restaurants.each do |restaurant| %>
-        <li>
-          <p><%= restaurant.name %></p>
-          <p><%= restaurant.cuisine %></p>
-          <%= link_to 'More Info', restaurant.link %>
-        </li>
-        <% end %>
-    </ul>
-</div>
-
-<div id="transport">
-  <h1>TRANSPORT</h1>
-  <i class="fa fa-ticket"></i>
-  <ul>
-    <% @authenticated.houses.first.transport_links.each do |transport_link| %>
-      <li>
-        <p><%= transport_link.name %></p>
-        <%= link_to 'More Info', transport_link.info %>
-      </li>
-      <% end %>
-  </ul>
-</div>
-
-<div id="amenities">
-  <h1>AMENITIES</h1>
-    <i class="fa fa-home"></i>
-    <ul>
-      <% @authenticated.houses.first.amenities.each do |amenity| %>
-      <li>
-        <p><%= amenity.name %></p>
-        <p><%= amenity.info %></p>
-      </li>
-      <% end %>
-    </ul>
-</div>
-
-<div id="emergencies">
-  <h1>EMERGENCIES</h1>
-    <i class="fa fa-ambulance"></i>
-    <p>Some text goes here.</p>
+  <div id="region_info">
+    <h1>THE REGION</h1>
+      <i class="fa fa-info"></i>
+      <h3>This website will tell you all about my region.</h3>
       <ul>
-        <% @authenticated.houses.first.emergency_contacts.each do |emergency_contact| %>
+        <% @authenticated.houses.first.region_facts.each do |region_fact| %>
         <li>
-        <p><%= emergency_contact.service %></p>
-        <p><%= emergency_contact.contact %></p>
+          <p><%= region_fact.fact %></p>
+           <%= link_to 'More Info', region_fact.link %>
+        </li>
+          <% end %>
+      </ul>
+  </div>
+
+  <div id="suburb_info">
+    <h1>THE SUBURB</h1>
+      <i class="fa fa-heart"></i>
+      <h3>This is something I love about my suburb.</h3>
+      <ul>
+        <% @authenticated.houses.first.suburb_facts.each do |suburb_fact| %>
+          <li>
+            <p><%= suburb_fact.fact %></p>
+            <%= link_to 'More Info', suburb_fact.link %>
+          </li>
+           <% end %>
+      </ul>
+  </div>
+
+  <div id="eating_out">
+    <h1>EATING</h1>
+      <i class="fa fa-cutlery"></i>
+      <h3>Here is a great place to eat.</h3>
+      <ul>
+        <% @authenticated.houses.first.restaurants.each do |restaurant| %>
+          <li>
+            <p><%= restaurant.name %></p>
+            <p class="quite_important"><%= restaurant.cuisine %></p>
+            <%= link_to 'More Info', restaurant.link %>
+          </li>
+          <% end %>
+      </ul>
+  </div>
+
+  <div id="transport">
+    <h1>TRANSPORT</h1>
+    <i class="fa fa-ticket"></i>
+    <h3>This website tells you all you need to know about getting around.</h3>
+    <ul>
+      <% @authenticated.houses.first.transport_links.each do |transport_link| %>
+        <li>
+          <p><%= transport_link.name %></p>
+          <%= link_to 'More Info', transport_link.info %>
+        </li>
+        <% end %>
+    </ul>
+  </div>
+
+  <div id="amenities">
+    <h1>AMENITIES</h1>
+      <i class="fa fa-home"></i>
+      <h3>This is something really important to know about my house.</h3>
+      <ul>
+        <% @authenticated.houses.first.amenities.each do |amenity| %>
+        <li>
+          <p class="important"><%= amenity.name %></p>
+          <p><%= amenity.info %></p>
         </li>
         <% end %>
       </ul>
-</div>
+  </div>
 
-<div id="also">
-  <h1>AND ALSO...</h1>
-    <i class="fa fa-exclamation-circle"></i>
-  <p>Some text goes here.</p>
-  <ul>
-    <% @authenticated.houses.first.extras.each do |extra| %>
-    <li>
-      <p><%= extra.text %></p>
-    </li>
-    <% end %>
-  </ul>
-</div>
+  <div id="emergencies">
+    <h1>EMERGENCIES</h1>
+      <i class="fa fa-ambulance"></i>
+      <h3>This is who to call if you get sick!</h3>
+        <ul>
+          <% @authenticated.houses.first.emergency_contacts.each do |emergency_contact| %>
+          <li>
+          <p class="important"><%= emergency_contact.service %></p>
+          <p><%= emergency_contact.contact %></p>
+          </li>
+          <% end %>
+        </ul>
+  </div>
+
+  <div id="also">
+    <h1>AND ALSO...</h1>
+      <i class="fa fa-exclamation-circle"></i>
+    <h3>Here's a pro tip for my street.</h3>
+    <ul>
+      <% @authenticated.houses.first.extras.each do |extra| %>
+      <li>
+        <p><%= extra.text %></p>
+      </li>
+      <% end %>
+    </ul>
+  </div>

@@ -3,10 +3,8 @@
 <p>Welcome back to airguidebook.</p>
 
 <% if @authenticated.houses.length %>
-  <%= link_to 'Continue with guide', edit_house_path(@authenticated.houses.first.id) %>
-  <%= button_to 'Delete guide', house_path(@authenticated.houses.first.id), :method => 'delete', :confirm => 'Are you sure?' %>
+  <%= link_to 'Continue with guide', edit_house_path(@authenticated.houses.first.id), :class => 'btn btn-primary btn-lg' %>
+  <%= button_to 'Delete guide', house_path(@authenticated.houses.first.id), :method => 'delete', :class => 'btn btn-primary btn-lg', :confirm => 'Are you sure?' %>
 <% else %>
-  <%= link_to 'Continue with guide', new_house_path %>
+  <%= link_to 'Continue with guide', new_house_path, :class => 'btn btn-primary btn-lg' %>
 <% end %>
-
-

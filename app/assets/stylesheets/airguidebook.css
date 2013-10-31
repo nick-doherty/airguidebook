@@ -2,16 +2,19 @@
   font-size: medium;
 }
 
+.navbar-brand {
+  font-family: 'bello-pro';
+  font-size: 25px;
+}
+
 .logo {
   font-family: 'bello-pro';
   font-size: 60px;
   padding: .3em, 3am, 3em, 0;
 }
 
-.logo-show {
-  font-family: 'bello-pro';
-  font-size: 70px;
-  padding: .3em, 3am, 3em, 0;
+li {
+  list-style: none;
 }
 
 body {
@@ -32,9 +35,57 @@ a {
 }
 
 .col-md-4 {
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 .btn-primary {
-  margin-top: 15px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.guidebook {
+  text-align: center;
+}
+
+.guidebook .logo {
+  font-family: 'bello-pro';
+  font-size: 80px;
+  padding: .3em, 3am, 3em, 0;
+}
+.guidebook h1 {
+  margin: 0.8em;
+}
+.guidebook i {
+  margin-bottom: .5em;
+  font-size: 100px;
+}
+
+.guidebook h3 {
+  margin: 0;
+  font-size: larger;
+}
+
+.guidebook ul {
+  padding: 2em;
+  margin: 0;
+}
+
+.guidebook ul li {
+  text-decoration: none;
+  list-style: none;
+  display: block;
+}
+
+.guidebook ul li p {
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+}
+
+.guidebook ul li a {
+  text-decoration: none;
+  list-style: none;
+}
+
+.guidebook div {
 }

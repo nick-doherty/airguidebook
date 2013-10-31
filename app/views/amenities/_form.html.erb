@@ -1,11 +1,11 @@
 <%= form_for @amenity do |f| %>
 <p>
   <%= f.label :name %>
-  <%= f.text_field :name, :autofocus => true, :class => 'form-control' %>
+  <%= f.text_field :name, :autofocus => true, :class => 'form-control', :placeholder => "TV" %>
   <%= f.label :info %>
-  <%= f.text_field :info, :class => 'form-control' %>
+  <%= f.text_field :info, :class => 'form-control', :placeholder => "You need to use the Samsung remote to turn on the TV. The smaller one does the audio." %>
 </p>
 
-<%= f.submit :class => 'btn btn-primary' %>
+<%= f.submit "Save and continue", :class => 'btn btn-primary' %>
 
 <% end %>

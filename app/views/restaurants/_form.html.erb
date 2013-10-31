@@ -1,14 +1,14 @@
 <%= form_for @restaurant do |f| %>
 <p>
   <%= f.label :name %>
-  <%= f.text_field :name, :autofocus => true, :class => 'form-control'  %>
+  <%= f.text_field :name, :autofocus => true, :class => 'form-control', :placeholder => "Luigi's Pizza." %>
   <%= f.label :cuisine %>
-  <%= f.text_field :cuisine, :class => 'form-control' %>
+  <%= f.text_field :cuisine, :class => 'form-control', :placeholder => "Italian" %>
   <%= f.label :link %>
-  <%= f.text_field :link, :class => 'form-control' %>
+  <%= f.text_field :link, :class => 'form-control', :placeholder => "www.luigispizza.com" %>
 </p>
 
-<%= f.submit :class => 'btn btn-primary' %>
+<%= f.submit "Save and continue", :class => 'btn btn-primary' %>
 
 <% end %>
 
