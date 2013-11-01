@@ -7,9 +7,13 @@ p {
   color: white;
 }
 
+.container .jumbotron h1 {
+  font-size: 55px;
+}
+
 .logo-font {
   font-family: 'bello-pro';
-  font-size: 1em;
+  font-size: .85em;
   color: white;
 }
 
