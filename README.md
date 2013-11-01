@@ -2,7 +2,7 @@
 
 This app allows you to easily create a guidebook for your Airbnb and send it to your guest.
 
-It was made as part of General Assembly (Australia)'s WDI course after 3 weeks of training.
+It was made as part of General Assembly (Australia)'s WDI course after 4 weeks of intensive training.
 
 ###Site flow:
 
@@ -35,6 +35,3 @@ nickdoherty@gmail.com
 **Thanks:**
 
 Joel Turnbull, Daniel Tsui, my classmates at WDI Sydney.
-
-
-
