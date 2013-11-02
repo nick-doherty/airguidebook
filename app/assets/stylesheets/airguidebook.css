@@ -5,6 +5,7 @@ p {
 .container .jumbotron {
   background-color: #0d747c;
   color: white;
+  text-align: center;
 }
 
 .container .jumbotron h1 {
@@ -13,7 +14,7 @@ p {
 
 .logo-font {
   font-family: 'bello-pro';
-  font-size: .85em;
+  font-size: 1em;
   color: white;
 }
 
